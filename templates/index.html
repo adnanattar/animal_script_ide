@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal-Script IDE</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for the output window */
+        #output, #code {
+            height: calc(50vh - 100px); /* Adjust as needed */
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Animal Script IDE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://androtechbuddy.com">Developer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/adnanattar/animal-script">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-5">
+        <div class="row">
+            <!-- Code Editor -->
+            <div class="col-md-6">
+                <h1 class="mb-4 text-center">Code Editor</h1>
+                <textarea id="code" rows="10" class="form-control" placeholder="Enter your Animal-Script code here..."></textarea>
+                <div class="text-center mt-3">
+                    <!-- Run Button -->
+                    <button onclick="runCode()" class="btn btn-primary me-3">Run</button>
+                    <!-- Clear Button -->
+                    <button onclick="clearData()" class="btn btn-danger">Clear</button>
+                </div>
+            </div>
+            <!-- Output Window -->
+            <div class="col-md-6">
+                <h1 class="mb-4 text-center">Output</h1>
+                <div id="output" class="bg-white p-3" style="height: calc(100vh - 200px); overflow: auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">©Copyright by <a href="https://androtechbuddy.com" target="_blank" rel="noopener noreferrer">AndroTechBuddy</a> 2024</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function runCode() {
+            var code = document.getElementById('code').value;
+            fetch('/run_code', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'code=' + encodeURIComponent(code),
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('output').innerText = data;
+            });
+        }
+
+        function clearData() {
+            document.getElementById('code').value = '';
+            document.getElementById('output').innerText = '';
+            // Flush cache code here (if needed)
+        }
+    </script>
+</body>
+</html>
