@@ -29,7 +29,7 @@ To run the Animal Script IDE locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/adnanattar/animal_script_ide
    ```
 
 2. Navigate to the project directory:
