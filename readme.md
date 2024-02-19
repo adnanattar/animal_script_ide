@@ -1,4 +1,3 @@
-```markdown
 # Animal Script IDE
 
 Animal Script IDE is a web-based integrated development environment (IDE) for writing and executing Animal Script code.
