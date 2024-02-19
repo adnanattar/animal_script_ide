@@ -1,60 +1,71 @@
+```markdown
 # Animal Script IDE
 
-Welcome to the Animal Script IDE! This is a web-based integrated development environment (IDE) for writing and executing Animal Script code.
+Animal Script IDE is a web-based integrated development environment (IDE) for writing and executing Animal Script code.
 
 ## Features
 
-- **Code Editor:** Write and edit your Animal Script code in a convenient text editor.
-- **Run Button:** Execute the Animal Script code with the click of a button.
-- **Output Window:** View the output of your Animal Script code.
-- **Clear Button:** Clear the code editor and output window.
-- **Responsive Design:** The IDE is responsive and works well on both desktop and mobile devices.
-- **Bootstrap Integration:** Utilizes Bootstrap for styling and responsiveness.
-- **Navigation:** Includes a header navigation bar with links to the developer's website and GitHub repository.
+- Code editor for writing Animal Script code.
+- Output window to view the execution results.
+- Run button to execute the code.
+- Clear button to clear the code editor and output window.
+- Responsive design for both desktop and mobile devices.
+- Navigation bar with links to the developer's website and GitHub repository.
 
-## Usage
+## Demo
 
-1. **Writing Code:**
-   - Enter your Animal Script code in the code editor textarea on the left side of the IDE.
-   - Use the Run button to execute the code.
-   - The output will be displayed in the output window on the right side of the IDE.
+You can access the live demo of the Animal Script IDE [here]([#](https://animal-script-ide.onrender.com)) 
 
-2. **Clearing Data:**
-   - Use the Clear button to clear the contents of the code editor and output window.
+## Technologies Used
+
+- HTML
+- CSS (Bootstrap)
+- JavaScript
+- Flask (Python web framework)
+
+## Setup
+
+To run the Animal Script IDE locally, follow these steps:
+
+1. Clone this repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd animal-script-ide
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install flask
+   ```
+
+4. Run the Flask application:
+
+   ```bash
+   python app.py
+   ```
+
+5. Open your web browser and navigate to `http://localhost:5000` to access the Animal Script IDE.
 
 ## Deployment
 
-### Deploying on ZEET
+You can deploy the Animal Script IDE on platforms like Render, Heroku, or Netlify. Follow the deployment instructions provided by the chosen platform.
 
-To deploy the Animal Script IDE on ZEET, follow these steps:
+## Contributing
 
-1. Sign up for a ZEET account.
-2. Create a new project on ZEET.
-3. Upload your project files to the ZEET dashboard.
-4. Configure your project settings as needed.
-5. Deploy your project on ZEET.
-6. Access your deployed IDE using the provided URL.
-
-### Deploying on GitHub Pages
-
-To deploy the Animal Script IDE on GitHub Pages, follow these steps:
-
-1. Fork this repository.
-2. Clone the forked repository to your local machine.
-3. Customize the code as needed.
-4. Commit and push your changes to the forked repository.
-5. Enable GitHub Pages in the repository settings and choose the main branch as the source.
-6. Access your deployed IDE using the provided GitHub Pages URL.
-
-## Credits
-
-- Developed by [Adnan B. Attar](https://androtechbuddy.com)
-- GitHub Repository: [Animal Script IDE](https://github.com/adnanattar/animal-script)
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please create an issue or submit a pull request.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-Copyright © 2024 by AndroTechBuddy.
+Copyright © 2024 [AndroTechBuddy](https://androtechbuddy.com)
+```
